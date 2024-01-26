@@ -8,7 +8,7 @@ def hello_world():
     >>> hello_world()
     'Hello, World!'
     """
-    raise NotImplementedError('Please implement this function for full credit')
+    return 'Hello, World!'
 
 
 def sum_unique(l):
@@ -27,7 +27,8 @@ def sum_unique(l):
     >>> sum_unique([2, 2, 2, 2, 1])
     3
     """
-    raise NotImplementedError('Please implement this function for full credit')
+    l = list(set(l))
+    return sum(l)
 
 
 def palindrome(x):
@@ -47,7 +48,8 @@ def palindrome(x):
     >>> palindrome('python')
     False
     """
-    raise NotImplementedError('Please implement this function for full credit')
+    x = str(x)
+    return x == x[::-1]
         
         
 
@@ -68,7 +70,7 @@ def sum_multiples(num):
     >>> sum_multiples(16) # Multiples: [3, 5, 6, 9, 10, 12, 15]
     60
     """
-    raise NotImplementedError('Please implement this function for full credit')
+    return sum([x for x in range(num) if x % 3 == 0 or x % 5 == 0])
 
 
 def num_func_mapper(nums, funs):
@@ -86,7 +88,7 @@ def num_func_mapper(nums, funs):
     >>> num_func_mapper(num_list, f_list)
     [11, 15]
     """
-    raise NotImplementedError('Please implement this function for full credit') 
+    return [fun(nums) for fun in funs]
 
 def height_sort(names, heights):
     """
@@ -104,8 +106,7 @@ def height_sort(names, heights):
     Output: ["Mary","Emma","John"]
     Explanation: Mary is the tallest, followed by Emma and John.
     """
-    
-    raise NotImplementedError('Please implement this function for full credit')
+    return [x for _, x in sorted(zip(heights,names), reverse = True)]
  
 def custom_sort(lst):
     """ Use Python's built-in sort function to sort the list so that the odd numbers (in the same order as in the original list) come first, and then the even numbers (also in the same order).
@@ -117,4 +118,4 @@ def custom_sort(lst):
     (Hint: use a lambda function) 
     """
     
-    raise NotImplementedError('Please implement this function for full credit')
+    return sorted(lst, key=lambda x: x % 2 == 0)
